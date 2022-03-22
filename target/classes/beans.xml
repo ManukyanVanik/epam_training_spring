@@ -32,20 +32,20 @@
     </bean>
 
     <bean name="hors2" class="am.training.trainig.beans.Horse">
-        <constructor-arg name="beard" value="beard "/>
+        <constructor-arg name="beard" value="poni"/>
         <constructor-arg name="raceNumber" value="2"/>
-        <constructor-arg name="rider" value="Jon"/>
+        <constructor-arg name="rider" value="Boni"/>
     </bean>
 
     <bean name="hors3" class="am.training.trainig.beans.Horse">
         <constructor-arg name="beard" value="beard3"/>
         <constructor-arg name="raceNumber" value="3"/>
-        <constructor-arg name="rider" value="Ton"/>
+        <constructor-arg name="rider" value="rider3"/>
     </bean>
 
     <bean name="hors4" class="am.training.trainig.beans.Horse">
         <constructor-arg name="beard" value="beard4"/>
         <constructor-arg name="raceNumber" value="4"/>
-        <constructor-arg name="rider" value="pit"/>
+        <constructor-arg name="rider" value="rider4"/>
     </bean>
 </beans>

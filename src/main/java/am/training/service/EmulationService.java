@@ -2,10 +2,8 @@ package am.training.service;
 
 import am.training.trainig.beans.Horse;
 import am.training.trainig.beans.Race;
-import org.springframework.beans.factory.annotation.Qualifier;
 
 import java.time.LocalDate;
-import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
@@ -33,6 +31,7 @@ public class EmulationService {
             sleep();
             count++;
         }
+
     }
 
     private void sleep() {
@@ -43,4 +42,10 @@ public class EmulationService {
         }
     }
 
+    @Override
+    public String toString() {
+        return "EmulationService{" +
+                "raceService=" + raceService +
+                '}';
+    }
 }

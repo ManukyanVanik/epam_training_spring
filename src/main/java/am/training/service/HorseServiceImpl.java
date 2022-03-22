@@ -15,4 +15,12 @@ public class HorseServiceImpl implements HorseService{
     public List<Horse> getHorses() {
         return horses;
     }
+
+    @Override
+    public String toString() {
+        return "HorseServiceImpl{" +
+                "horses=" + horses +
+                '}';
+    }
 }
+
