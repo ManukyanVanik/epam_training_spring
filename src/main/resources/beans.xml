@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+
+    <bean name="horseService" class="am.training.service.HorseServiceImpl">
+        <constructor-arg name="horses" ref="horses"/>
+    </bean>
+
+    <bean name="raceService" class="am.training.service.RaceServiceImpl">
+        <property name="horseService" ref="horseService"/>
+    </bean>
+
+    <util:list id="horses" value-type="am.training.trainig.beans.Horse">
+        <ref bean="hors1"/>
+        <ref bean="hors2"/>
+        <ref bean="hors3"/>
+        <ref bean="hors4"/>
+    </util:list>
+
+    <bean name="hors1" class="am.training.trainig.beans.Horse">
+        <constructor-arg name="beard" value="arabakan"/>
+        <constructor-arg name="raceNumber" value="1"/>
+        <constructor-arg name="rider" value="Ahmed"/>
+    </bean>
+
+    <bean name="hors2" class="am.training.trainig.beans.Horse">
+        <constructor-arg name="beard" value="poni"/>
+        <constructor-arg name="raceNumber" value="2"/>
+        <constructor-arg name="rider" value="Boni"/>
+    </bean>
+
+    <bean name="hors3" class="am.training.trainig.beans.Horse">
+        <constructor-arg name="beard" value="beard3"/>
+        <constructor-arg name="raceNumber" value="3"/>
+        <constructor-arg name="rider" value="rider3"/>
+    </bean>
+
+    <bean name="hors4" class="am.training.trainig.beans.Horse">
+        <constructor-arg name="beard" value="beard4"/>
+        <constructor-arg name="raceNumber" value="4"/>
+        <constructor-arg name="rider" value="rider4"/>
+    </bean>
+</beans>
